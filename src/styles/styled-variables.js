@@ -12,6 +12,7 @@ const COLORS = {
   navBg: "hsl(0, 0%, 20%)",
   clrLight: "hsl(0, 0%, 95%)",
   onFocus: "hsl(46, 80%, 50%)",
+  danger: "hsl(4, 70%, 55%)",
 };
 
 export { SIZES, COLORS };

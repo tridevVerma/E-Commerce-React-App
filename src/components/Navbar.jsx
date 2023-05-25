@@ -36,7 +36,10 @@ const Navbar = () => {
           </li>
           <li>
             <a href="/my-cart">
-              <i className="fa-solid fa-cart-shopping"></i>
+              <i
+                className="fa-solid fa-cart-shopping items-count"
+                data-count={5}
+              ></i>
               <span>My Cart</span>
             </a>
           </li>

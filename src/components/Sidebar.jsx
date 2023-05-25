@@ -13,19 +13,22 @@ const Sidebar = ({ open, close }) => {
       <ul>
         <li>
           <a href="/products">
-            <i class="fa-solid fa-basket-shopping"></i>
+            <i className="fa-solid fa-basket-shopping"></i>
             <span>Products</span>
           </a>
         </li>
         <li>
           <a href="/add-product">
-            <i class="fa-sharp fa-solid fa-cart-plus"></i>
+            <i className="fa-sharp fa-solid fa-cart-plus"></i>
             <span>Add Product</span>
           </a>
         </li>
         <li>
           <a href="/my-cart">
-            <i className="fa-solid fa-cart-shopping"></i>
+            <i
+              className="fa-solid fa-cart-shopping items-count"
+              data-count={5}
+            ></i>
             <span>My Cart</span>
           </a>
         </li>

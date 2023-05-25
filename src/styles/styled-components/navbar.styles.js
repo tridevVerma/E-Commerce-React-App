@@ -80,6 +80,25 @@ const StyledNavbar = styled.nav`
         &:hover {
           color: ${COLORS.onFocus};
         }
+
+        .items-count {
+          position: relative;
+          &::after {
+            content: attr(data-count);
+            position: absolute;
+            top: -50%;
+            right: -40%;
+            width: 1.1rem;
+            aspect-ratio: 1 / 1;
+            font-size: 0.5rem;
+            border-radius: 50%;
+            background: ${COLORS.danger};
+            color: ${COLORS.clrLight};
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
       }
     }
   }

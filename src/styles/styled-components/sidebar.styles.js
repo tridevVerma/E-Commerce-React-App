@@ -69,6 +69,25 @@ const StyledSidebar = styled.div`
         @media screen and (min-width: ${SIZES.medium}) {
           font-size: 1.2rem;
         }
+
+        .items-count {
+          position: relative;
+          &::after {
+            content: attr(data-count);
+            position: absolute;
+            top: -50%;
+            right: -40%;
+            width: 1rem;
+            aspect-ratio: 1 / 1;
+            font-size: 0.4rem;
+            border-radius: 50%;
+            background: ${COLORS.danger};
+            color: ${COLORS.clrLight};
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
       }
     }
   }
