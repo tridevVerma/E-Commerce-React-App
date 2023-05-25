@@ -1,9 +1,21 @@
+/* GENERAL STYLING */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+:root {
+  /* VARIABLES */
+
+  /* Font size */
+  --xsmall-fs: 11px;
+  --small-fs: 13px;
+  --medium-fs: 15px;
+  --large-fs: 17px;
+  --xlarge-fs: 19px;
 }
 
 body {
@@ -13,9 +25,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: hsl(0, 0%, 10%);
+  opacity: 0.4;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 9;
+}
+
+.hide {
+  display: none;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+i + span,
+img + span {
+  margin-left: 1rem;
 }
