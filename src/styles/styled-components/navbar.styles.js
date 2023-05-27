@@ -39,6 +39,7 @@ const StyledNavbar = styled.nav`
   }
 
   > .sidebar-toggler {
+    display: block;
     font-size: 1.3rem;
     color: ${COLORS.clrLight};
     background: transparent;

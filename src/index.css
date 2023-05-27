@@ -25,23 +25,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
-}
-
-.overlay {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: hsl(0, 0%, 10%);
-  opacity: 0.4;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-  z-index: 9;
-}
-
-.hide {
-  display: none;
 }
 
 code {
@@ -68,4 +51,29 @@ button:hover {
 i + span,
 img + span {
   margin-left: 1rem;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: hsl(0, 0%, 10%);
+  opacity: 0.4;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 9;
+}
+
+.hide {
+  display: none;
+}
+
+.sidebar-container {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
 }

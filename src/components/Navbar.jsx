@@ -45,7 +45,9 @@ const Navbar = () => {
           </li>
         </ul>
       </StyledNavbar>
-      <Sidebar open={showSidebar} close={closeSidebar} />
+      <div className="sidebar-container">
+        <Sidebar open={showSidebar} close={closeSidebar} />
+      </div>
     </>
   );
 };

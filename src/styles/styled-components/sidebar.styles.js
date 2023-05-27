@@ -6,7 +6,7 @@ const StyledSidebar = styled.div`
   top: 0%;
   right: 0%;
   width: 90%;
-  height: 100vh;
+  height: 100%;
   background: ${COLORS.navBg};
   padding: 1.5rem;
   z-index: 10;
