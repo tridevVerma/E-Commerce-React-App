@@ -1,9 +1,10 @@
 import React from "react";
+import AllProducts from "./AllProducts";
 
 const Home = () => {
   return (
     <>
-      <h1>Home</h1>
+      <AllProducts />
       <div className="overlay hide"></div>
     </>
   );

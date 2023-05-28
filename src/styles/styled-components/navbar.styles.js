@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { SIZES, COLORS } from "../styled-variables";
 
 const StyledNavbar = styled.nav`
-  position: fixed;
+  position: sticky;
   top: 0%;
   left: 0%;
   width: 100%;
