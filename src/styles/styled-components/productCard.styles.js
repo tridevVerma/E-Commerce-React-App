@@ -76,10 +76,29 @@ const StyledProductCard = styled.div`
     flex-direction: column;
     gap: 0.5rem;
 
-    > h3 {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+    > .header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      justify-content: space-between;
+      > h3 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      > button {
+        padding: 0.5rem 0.9rem;
+        color: hsl(0, 0%, 15%);
+
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+          rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+          rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        position: relative;
+        z-index: 5;
+        > i + span {
+          margin-left: 0.6rem;
+        }
+      }
     }
 
     > .rating {
@@ -98,7 +117,11 @@ const StyledProductCard = styled.div`
   }
 
   > .card-action {
-    > button {
+    > a {
+      display: block;
+      text-align: center;
+      background: hsl(0, 0%, 90%);
+      color: hsl(0, 0%, 15%);
       width: 100%;
       padding: 0.8rem;
       font-size: 1.2rem;

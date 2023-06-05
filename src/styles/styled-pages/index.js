@@ -1,3 +1,3 @@
 import StyledAllProducts from "./StyledAllProducts.styles";
-
-export { StyledAllProducts };
+import StyledProductDetails from "./StyledProductDetails.styles";
+export { StyledAllProducts, StyledProductDetails };

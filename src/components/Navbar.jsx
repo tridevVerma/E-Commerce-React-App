@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { StyledNavbar } from "../styles/styled-components";
 import { Sidebar } from "./";
+import { useCartContext } from "../Provider/Cart";
 
 const Navbar = () => {
+  const cart = useCartContext();
+
   const [showSidebar, setShowSidebar] = useState(false);
+
   const openSidebar = () => {
     document.querySelector(".overlay").classList.remove("hide");
     setShowSidebar(true);
@@ -38,7 +42,7 @@ const Navbar = () => {
             <a href="/my-cart">
               <i
                 className="fa-solid fa-cart-shopping items-count"
-                data-count={5}
+                data-count={cart.products.length}
               ></i>
               <span>My Cart</span>
             </a>

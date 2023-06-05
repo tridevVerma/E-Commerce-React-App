@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { SIZES, COLORS } from "../styled-variables";
 
 const StyledSidebar = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0%;
   right: 0%;
   width: 90%;

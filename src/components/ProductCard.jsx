@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import { StyledProductCard } from "../styles/styled-components";
+import { Link } from "react-router-dom";
+import { useCartContext } from "../Provider/Cart";
 
 const ProductCard = ({ product }) => {
+  const cart = useCartContext();
   const [showMenuList, setShowMenuList] = useState(false);
   function handleMenuList() {
     setShowMenuList((prev) => !prev);
   }
+
+  function showDetails() {}
   return (
     <StyledProductCard>
-      <div className="card-image">
+      <div className="card-image" onClick={showDetails}>
         <img src={product.thumbnail} alt="product" />
         <button onClick={handleMenuList}>
           <i className="fa-solid fa-ellipsis"></i>
@@ -32,7 +37,20 @@ const ProductCard = ({ product }) => {
       </div>
 
       <div className="card-description">
-        <h3>{product.title}</h3>
+        <div className="header">
+          <h3>{product.title}</h3>
+          {cart.checkProductExists(product.id) ? (
+            <button onClick={() => cart.remove(product.id)}>
+              <i className="fa-solid fa-cart-plus"></i>
+              <span>Remove</span>
+            </button>
+          ) : (
+            <button onClick={() => cart.add(product)}>
+              <i className="fa-solid fa-cart-plus"></i>
+              <span>Add</span>
+            </button>
+          )}
+        </div>
         <span className="rating">{product.rating}⭐</span>
         <p>Stock {product.stock}</p>
         <p className="price">
@@ -40,7 +58,7 @@ const ProductCard = ({ product }) => {
         </p>
       </div>
       <div className="card-action">
-        <button>Add to Cart</button>
+        <Link to={`/product/${product.id}`}>Show Details</Link>
       </div>
     </StyledProductCard>
   );
